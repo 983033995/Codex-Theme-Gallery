@@ -1,33 +1,33 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-07-20T04:24:06.152Z",
+  "generatedAt": "2026-07-20T06:43:49.231Z",
   "themes": [
     {
       "id": "fortune-coder",
       "name": "财神打工",
-      "version": "1.0.0",
-      "summary": "红金喜庆的财神主题，包含新建任务首页、侧边栏钱袋图标、聚宝盆安全层和可读性配色。",
+      "version": "1.1.0",
+      "summary": "红金喜庆的财神主题，包含响应式新建任务首页、财神功能图标、侧边栏钱袋图标、聚宝盆安全层和可读性配色。",
       "author": "Codex Theme Studio Community",
       "sharedBy": "983033995",
       "license": "CC-BY-4.0",
       "createdAt": "2026-07-20T00:00:00Z",
       "publishedAt": "2026-07-20T00:00:00Z",
       "updatedAt": "2026-07-20T04:24:02.444Z",
-      "releaseTag": "theme-fortune-coder-v1.0.0",
-      "previewURL": "https://github.com/983033995/Codex-Theme-Gallery/releases/download/theme-fortune-coder-v1.0.0/preview.png",
+      "releaseTag": "theme-fortune-coder-v1.1.0",
+      "previewURL": "https://github.com/983033995/Codex-Theme-Gallery/releases/download/theme-fortune-coder-v1.1.0/preview.png",
       "statsIssueURL": "https://github.com/983033995/Codex-Theme-Gallery/issues/1",
       "stats": {
         "downloads": 0,
         "favorites": 0
       },
       "minEngineVersion": "1.3.0",
-      "themeConfigURL": "https://github.com/983033995/Codex-Theme-Gallery/releases/download/theme-fortune-coder-v1.0.0/theme.json",
-      "imageURL": "https://github.com/983033995/Codex-Theme-Gallery/releases/download/theme-fortune-coder-v1.0.0/background.jpg",
-      "themeSHA256": "98ed568b86fa0cc814e8ec0d98859a88e7e07e721b8bd716959e96790ff34063",
+      "themeConfigURL": "https://github.com/983033995/Codex-Theme-Gallery/releases/download/theme-fortune-coder-v1.1.0/theme.json",
+      "imageURL": "https://github.com/983033995/Codex-Theme-Gallery/releases/download/theme-fortune-coder-v1.1.0/background.jpg",
+      "themeSHA256": "e73d2fccdb3bac591e2d520583646163ab52bb8ed35990a3431fd9efd3d88a3d",
       "imageSHA256": "09113a93445e774923308ae0a1706e71fc46ab2109c9dcb07472eb0f3bcfa437",
-      "themeBytes": 809,
+      "themeBytes": 839,
       "imageBytes": 997112,
-      "sourceURL": "https://github.com/983033995/Codex-Theme-Gallery/tree/17170065c8972f4b1fd63aa735acfd7687adf433/packages/themes/fortune-coder/1.0.0"
+      "sourceURL": "https://github.com/983033995/Codex-Theme-Gallery/tree/f6234ea423266a2f40758425badad0ae8006eec2/packages/themes/fortune-coder/1.1.0"
     }
   ],
   "pets": []
