@@ -1,0 +1,11 @@
+{
+  "homeHero": "assets/hero-cutout.png",
+  "homeParchment": "assets/hero-parchment.png",
+  "projectCollapsed": "assets/project-bag-collapsed.png",
+  "projectExpanded": "assets/project-bag-expanded.png",
+  "cornerOrnament": "assets/project-bag-expanded.png",
+  "actionCost": "assets/action-cost.png",
+  "actionDebt": "assets/action-debt.png",
+  "actionReport": "assets/action-report.png",
+  "actionMerge": "assets/action-merge.png"
+}

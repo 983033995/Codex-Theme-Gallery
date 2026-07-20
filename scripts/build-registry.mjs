@@ -28,6 +28,26 @@ function sourceURL(relativePath) {
   return `https://github.com/${repository}/tree/${ref}/${relativePath.split(path.sep).map(encodeURIComponent).join("/")}`;
 }
 
+function compareVersions(left, right) {
+  const parse = (value) => {
+    const [core, prerelease] = value.split("-", 2);
+    return {
+      core: core.split(".").map(Number),
+      prerelease: prerelease ?? null
+    };
+  };
+  const leftVersion = parse(left);
+  const rightVersion = parse(right);
+  for (let index = 0; index < 3; index += 1) {
+    const difference = (leftVersion.core[index] ?? 0) - (rightVersion.core[index] ?? 0);
+    if (difference !== 0) return difference;
+  }
+  if (leftVersion.prerelease === rightVersion.prerelease) return 0;
+  if (leftVersion.prerelease === null) return 1;
+  if (rightVersion.prerelease === null) return -1;
+  return leftVersion.prerelease.localeCompare(rightVersion.prerelease);
+}
+
 function versions(kind) {
   const base = path.join(root, "packages", kind);
   if (!fs.existsSync(base)) return [];
@@ -36,11 +56,21 @@ function versions(kind) {
   for (const id of fs.readdirSync(base)) {
     const idRoot = path.join(base, id);
     if (!fs.statSync(idRoot).isDirectory()) continue;
+    let latest = null;
     for (const version of fs.readdirSync(idRoot)) {
       const directory = path.join(idRoot, version);
       const manifestPath = path.join(directory, manifestName);
-      if (fs.existsSync(manifestPath)) results.push({ directory, manifestPath, manifest: JSON.parse(fs.readFileSync(manifestPath, "utf8")) });
+      if (!fs.existsSync(manifestPath)) continue;
+      const candidate = {
+        directory,
+        manifestPath,
+        manifest: JSON.parse(fs.readFileSync(manifestPath, "utf8"))
+      };
+      if (!latest || compareVersions(candidate.manifest.version, latest.manifest.version) > 0) {
+        latest = candidate;
+      }
     }
+    if (latest) results.push(latest);
   }
   return results;
 }
