@@ -22,6 +22,7 @@ Build themes as a complete interface system, not a background replacement. Prese
 3. Create real assets.
    - Use source assets when rights are clear; otherwise generate raster assets with ImageGen.
    - Create separate transparent PNG/WebP assets for hero figures, project collapsed/expanded icons, and foreground ornaments.
+   - When feature cards are theme-specific, create a cohesive raster icon family instead of reusing unrelated generic product icons.
    - Never fake decorative artwork with emoji, CSS drawings, inline SVG, or text symbols.
    - Size each asset for its actual UI slot and preserve transparent padding intentionally.
 
@@ -34,6 +35,8 @@ Build themes as a complete interface system, not a background replacement. Prese
    - Use stable accessibility/state attributes before geometry or generated class names.
    - Map project icons from `aria-expanded`: collapsed uses the normal asset; expanded uses the animated/spraying asset.
    - Make icon hydration idempotent because the home dashboard can mount before sidebar assets exist.
+   - Use named container queries for the home dashboard because Codex side panels can shrink the content column without changing the window viewport.
+   - Keep Chinese action titles horizontal with sufficient grid tracks and `word-break: keep-all`; never accept one-character-per-line card text.
    - Set hover cursor and visible hover/active/focus styles for every actionable sidebar row.
 
 6. Protect content layers.
