@@ -1,0 +1,38 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/983033995/Codex-Theme-Gallery/raw/main/registry/schema/theme-v1.schema.json",
+  "title": "Codex Theme Package v1",
+  "type": "object",
+  "additionalProperties": true,
+  "required": [
+    "schemaVersion",
+    "id",
+    "name",
+    "version",
+    "description",
+    "author",
+    "sharedBy",
+    "createdAt",
+    "license",
+    "image"
+  ],
+  "properties": {
+    "schemaVersion": { "const": 1 },
+    "id": { "type": "string", "pattern": "^[a-z0-9][a-z0-9-]{1,63}$" },
+    "name": { "type": "string", "minLength": 1, "maxLength": 80 },
+    "version": { "type": "string", "pattern": "^(0|[1-9][0-9]*)\\.(0|[1-9][0-9]*)\\.(0|[1-9][0-9]*)(?:-[0-9A-Za-z.-]+)?(?:\\+[0-9A-Za-z.-]+)?$" },
+    "description": { "type": "string", "minLength": 1, "maxLength": 500 },
+    "author": { "type": "string", "minLength": 1, "maxLength": 120 },
+    "sharedBy": { "type": "string", "pattern": "^[A-Za-z0-9](?:[A-Za-z0-9-]{0,37}[A-Za-z0-9])?$" },
+    "createdAt": { "type": "string", "format": "date-time" },
+    "license": { "type": "string", "minLength": 1, "maxLength": 80 },
+    "minEngineVersion": { "type": "string" },
+    "image": { "type": "string", "pattern": "^[^/]+\\.(png|jpg|jpeg|webp|gif)$" },
+    "preview": { "type": "string", "pattern": "^[^/]+\\.(png|jpg|jpeg|webp|gif)$" },
+    "tokens": { "type": "string", "pattern": "^[^/]+\\.json$" },
+    "decorations": { "type": "string", "pattern": "^[^/]+\\.json$" },
+    "appearance": { "enum": ["light", "dark", "auto"] },
+    "tagline": { "type": "string", "maxLength": 120 },
+    "homepage": { "type": "string", "format": "uri" }
+  }
+}

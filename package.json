@@ -1,0 +1,14 @@
+{
+  "name": "codex-theme-gallery",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "test": "node scripts/test.mjs",
+    "validate:registry": "node scripts/validate-registry.mjs registry/registry-v1.json",
+    "build:registry": "node scripts/build-registry.mjs"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}

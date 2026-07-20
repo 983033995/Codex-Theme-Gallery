@@ -1,0 +1,27 @@
+name: Release Gallery snapshot
+
+on:
+  push:
+    tags: ["gallery-v*"]
+
+permissions:
+  contents: write
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    env:
+      GH_TOKEN: ${{ github.token }}
+    steps:
+      - uses: actions/checkout@v6
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - run: npm test
+      - name: Build snapshot
+        run: |
+          archive="Codex-Theme-Gallery-${GITHUB_REF_NAME}.zip"
+          zip -r "$archive" registry docs skills README.md CONTRIBUTING.md LICENSE NOTICE.md VERSION
+          sha256sum "$archive" > "$archive.sha256"
+      - name: Create GitHub Release
+        run: gh release create "$GITHUB_REF_NAME" Codex-Theme-Gallery-*.zip Codex-Theme-Gallery-*.sha256 --generate-notes --verify-tag

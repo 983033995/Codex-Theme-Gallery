@@ -1,0 +1,23 @@
+{
+  "schemaVersion": 1,
+  "id": "fortune-coder",
+  "name": "财神打工",
+  "version": "1.0.0",
+  "description": "红金喜庆的财神主题，包含新建任务首页、侧边栏钱袋图标、聚宝盆安全层和可读性配色。",
+  "author": "Codex Theme Studio Community",
+  "sharedBy": "983033995",
+  "createdAt": "2026-07-20T00:00:00Z",
+  "license": "CC-BY-4.0",
+  "minEngineVersion": "1.3.0",
+  "image": "background.jpg",
+  "preview": "preview.png",
+  "appearance": "light",
+  "tagline": "让代码为你打工，效率为你生财",
+  "tokens": "tokens.json",
+  "decorations": "decorations.json",
+  "brandSubtitle": "财神打工版",
+  "projectPrefix": "招财项目 · ",
+  "projectLabel": "选择招财项目",
+  "statusText": "今日财运在线",
+  "quote": "稳健交付 · 顺手发财"
+}

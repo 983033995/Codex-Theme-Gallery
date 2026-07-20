@@ -1,0 +1,71 @@
+name: Publish packages and registry
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - "packages/**"
+      - "stats/**"
+      - "scripts/build-registry.mjs"
+      - "scripts/ensure-catalog-issues.mjs"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  issues: write
+
+concurrency:
+  group: gallery-publish
+  cancel-in-progress: false
+
+jobs:
+  publish:
+    if: github.actor != 'github-actions[bot]'
+    runs-on: ubuntu-latest
+    env:
+      GH_TOKEN: ${{ github.token }}
+      GITHUB_TOKEN: ${{ github.token }}
+    steps:
+      - uses: actions/checkout@v6
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - run: npm test
+      - name: Ensure catalog label
+        run: gh label create catalog-item --color D6A62E --description "Theme or pet favorite counter" --force
+      - name: Ensure favorite issues
+        run: node scripts/ensure-catalog-issues.mjs
+      - name: Publish immutable package releases
+        shell: bash
+        run: |
+          while IFS= read -r manifest; do
+            directory="$(dirname "$manifest")"
+            id="$(jq -r '.id' "$manifest")"
+            version="$(jq -r '.version' "$manifest")"
+            if [[ "$(basename "$manifest")" == "theme.json" ]]; then
+              kind="theme"
+              title="Theme: $(jq -r '.name' "$manifest")"
+            else
+              kind="pet"
+              title="Pet: $(jq -r '.displayName' "$manifest")"
+            fi
+            tag="${kind}-${id}-v${version}"
+            if gh release view "$tag" >/dev/null 2>&1; then
+              continue
+            fi
+            mapfile -d '' assets < <(find "$directory" -type f ! -name README.md ! -name LICENSE -print0)
+            gh release create "$tag" "${assets[@]}" --title "$title $version" --notes "Immutable Gallery package for ${id}@${version}."
+          done < <(find packages -type f \( -name theme.json -o -name pet.json \) | sort)
+      - name: Build registry
+        run: |
+          node scripts/build-registry.mjs --repo "$GITHUB_REPOSITORY" --ref "$GITHUB_SHA"
+          node scripts/validate-registry.mjs registry/registry-v1.json
+      - name: Commit generated metadata
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add registry/registry-v1.json stats
+          git diff --cached --quiet || git commit -m "chore(registry): publish gallery metadata"
+          git push

@@ -1,0 +1,4 @@
+interface:
+  display_name: "Codex Theme Crafter"
+  short_description: "Create and package Codex themes from a visual concept"
+  default_prompt: "Use $craft-codex-theme to turn this visual direction into a validated Codex theme package."

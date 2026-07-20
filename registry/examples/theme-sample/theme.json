@@ -1,0 +1,15 @@
+{
+  "schemaVersion": 1,
+  "id": "sample-theme",
+  "name": "Sample Theme",
+  "version": "1.0.0",
+  "description": "Manifest-only example for community theme authors.",
+  "author": "Example Author",
+  "sharedBy": "example-author",
+  "createdAt": "2026-07-20T00:00:00Z",
+  "license": "CC-BY-4.0",
+  "minEngineVersion": "1.3.0",
+  "image": "background.webp",
+  "appearance": "auto",
+  "tagline": "A safe example"
+}

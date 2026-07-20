@@ -1,0 +1,17 @@
+{
+  "schemaVersion": 1,
+  "id": "replace-me",
+  "name": "Replace Me",
+  "version": "0.1.0",
+  "description": "Describe the theme",
+  "author": "Creator",
+  "sharedBy": "github-user",
+  "createdAt": "2026-01-01T00:00:00Z",
+  "license": "CC-BY-4.0",
+  "minEngineVersion": "1.3.0",
+  "image": "background.webp",
+  "preview": "preview.webp",
+  "appearance": "auto",
+  "tokens": "tokens.json",
+  "decorations": "decorations.json"
+}

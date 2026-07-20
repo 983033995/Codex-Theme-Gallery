@@ -1,0 +1,5 @@
+blank_issues_enabled: true
+contact_links:
+  - name: Theme Studio App 问题
+    url: https://github.com/983033995/Codex-Theme-Studio/issues
+    about: App、安装、切换和 Provider 问题请提交到 App 仓库。

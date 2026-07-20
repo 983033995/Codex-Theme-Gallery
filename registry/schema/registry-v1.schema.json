@@ -1,0 +1,97 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/983033995/Codex-Theme-Gallery/raw/main/registry/schema/registry-v1.schema.json",
+  "title": "Codex Theme Gallery Registry v1",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schemaVersion", "generatedAt", "themes", "pets"],
+  "properties": {
+    "schemaVersion": { "const": 1 },
+    "generatedAt": { "type": "string", "format": "date-time" },
+    "themes": {
+      "type": "array",
+      "items": { "$ref": "#/$defs/theme" }
+    },
+    "pets": {
+      "type": "array",
+      "items": { "$ref": "#/$defs/pet" }
+    }
+  },
+  "$defs": {
+    "stats": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["downloads", "favorites"],
+      "properties": {
+        "downloads": { "type": "integer", "minimum": 0 },
+        "favorites": { "type": "integer", "minimum": 0 }
+      }
+    },
+    "base": {
+      "type": "object",
+      "required": [
+        "id",
+        "name",
+        "version",
+        "author",
+        "sharedBy",
+        "license",
+        "createdAt",
+        "publishedAt",
+        "releaseTag",
+        "stats"
+      ],
+      "properties": {
+        "id": { "type": "string" },
+        "name": { "type": "string" },
+        "version": { "type": "string" },
+        "summary": { "type": "string" },
+        "author": { "type": "string" },
+        "sharedBy": { "type": "string" },
+        "license": { "type": "string" },
+        "createdAt": { "type": "string", "format": "date-time" },
+        "publishedAt": { "type": "string", "format": "date-time" },
+        "updatedAt": { "type": "string", "format": "date-time" },
+        "releaseTag": { "type": "string" },
+        "previewURL": { "type": ["string", "null"], "format": "uri" },
+        "statsIssueURL": { "type": ["string", "null"], "format": "uri" },
+        "stats": { "$ref": "#/$defs/stats" }
+      }
+    },
+    "theme": {
+      "allOf": [
+        { "$ref": "#/$defs/base" },
+        {
+          "type": "object",
+          "required": ["themeConfigURL", "imageURL", "themeSHA256", "imageSHA256", "themeBytes", "imageBytes"],
+          "properties": {
+            "minEngineVersion": { "type": ["string", "null"] },
+            "themeConfigURL": { "type": "string", "format": "uri" },
+            "imageURL": { "type": "string", "format": "uri" },
+            "themeSHA256": { "type": "string", "pattern": "^[a-f0-9]{64}$" },
+            "imageSHA256": { "type": "string", "pattern": "^[a-f0-9]{64}$" },
+            "themeBytes": { "type": "integer", "minimum": 1 },
+            "imageBytes": { "type": "integer", "minimum": 1 }
+          }
+        }
+      ]
+    },
+    "pet": {
+      "allOf": [
+        { "$ref": "#/$defs/base" },
+        {
+          "type": "object",
+          "required": ["petConfigURL", "spritesheetURL", "petSHA256", "spritesheetSHA256", "petBytes", "spritesheetBytes"],
+          "properties": {
+            "petConfigURL": { "type": "string", "format": "uri" },
+            "spritesheetURL": { "type": "string", "format": "uri" },
+            "petSHA256": { "type": "string", "pattern": "^[a-f0-9]{64}$" },
+            "spritesheetSHA256": { "type": "string", "pattern": "^[a-f0-9]{64}$" },
+            "petBytes": { "type": "integer", "minimum": 1 },
+            "spritesheetBytes": { "type": "integer", "minimum": 1 }
+          }
+        }
+      ]
+    }
+  }
+}

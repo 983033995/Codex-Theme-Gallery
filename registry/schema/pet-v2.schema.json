@@ -1,0 +1,46 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/983033995/Codex-Theme-Gallery/raw/main/registry/schema/pet-v2.schema.json",
+  "title": "Codex Pet Package v2",
+  "type": "object",
+  "additionalProperties": true,
+  "required": [
+    "schemaVersion",
+    "id",
+    "displayName",
+    "version",
+    "description",
+    "author",
+    "sharedBy",
+    "createdAt",
+    "license",
+    "spriteVersionNumber",
+    "spritesheetPath",
+    "atlas"
+  ],
+  "properties": {
+    "schemaVersion": { "const": 1 },
+    "id": { "type": "string", "pattern": "^[a-z0-9][a-z0-9-]{1,63}$" },
+    "displayName": { "type": "string", "minLength": 1, "maxLength": 80 },
+    "version": { "type": "string" },
+    "description": { "type": "string", "minLength": 1, "maxLength": 500 },
+    "author": { "type": "string", "minLength": 1, "maxLength": 120 },
+    "sharedBy": { "type": "string", "minLength": 1, "maxLength": 39 },
+    "createdAt": { "type": "string", "format": "date-time" },
+    "license": { "type": "string", "minLength": 1, "maxLength": 80 },
+    "spriteVersionNumber": { "const": 2 },
+    "spritesheetPath": { "const": "spritesheet.webp" },
+    "preview": { "type": "string", "pattern": "^[^/]+\\.(png|jpg|jpeg|webp|gif)$" },
+    "atlas": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["columns", "rows", "cellWidth", "cellHeight"],
+      "properties": {
+        "columns": { "const": 8 },
+        "rows": { "const": 11 },
+        "cellWidth": { "const": 192 },
+        "cellHeight": { "const": 208 }
+      }
+    }
+  }
+}

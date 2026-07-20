@@ -1,0 +1,35 @@
+name: Refresh gallery statistics
+
+on:
+  schedule:
+    - cron: "17 */6 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  issues: read
+
+concurrency:
+  group: gallery-stats
+  cancel-in-progress: true
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    env:
+      GITHUB_TOKEN: ${{ github.token }}
+    steps:
+      - uses: actions/checkout@v6
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - run: node scripts/sync-github-stats.mjs
+      - run: node scripts/build-registry.mjs --repo "$GITHUB_REPOSITORY" --ref "$GITHUB_SHA"
+      - run: node scripts/validate-registry.mjs registry/registry-v1.json
+      - name: Commit counters
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add stats registry/registry-v1.json
+          git diff --cached --quiet || git commit -m "chore(stats): refresh gallery counters"
+          git push
