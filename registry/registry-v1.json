@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-07-20T04:19:21.482Z",
+  "generatedAt": "2026-07-20T04:24:06.152Z",
   "themes": [
     {
       "id": "fortune-coder",
@@ -12,10 +12,10 @@
       "license": "CC-BY-4.0",
       "createdAt": "2026-07-20T00:00:00Z",
       "publishedAt": "2026-07-20T00:00:00Z",
-      "updatedAt": "2026-07-20T00:00:00Z",
+      "updatedAt": "2026-07-20T04:24:02.444Z",
       "releaseTag": "theme-fortune-coder-v1.0.0",
       "previewURL": "https://github.com/983033995/Codex-Theme-Gallery/releases/download/theme-fortune-coder-v1.0.0/preview.png",
-      "statsIssueURL": null,
+      "statsIssueURL": "https://github.com/983033995/Codex-Theme-Gallery/issues/1",
       "stats": {
         "downloads": 0,
         "favorites": 0
@@ -23,11 +23,11 @@
       "minEngineVersion": "1.3.0",
       "themeConfigURL": "https://github.com/983033995/Codex-Theme-Gallery/releases/download/theme-fortune-coder-v1.0.0/theme.json",
       "imageURL": "https://github.com/983033995/Codex-Theme-Gallery/releases/download/theme-fortune-coder-v1.0.0/background.jpg",
-      "themeSHA256": "a5b9694896624417b1645150008e0a549a78189052006a370823bcb3043cec76",
+      "themeSHA256": "98ed568b86fa0cc814e8ec0d98859a88e7e07e721b8bd716959e96790ff34063",
       "imageSHA256": "09113a93445e774923308ae0a1706e71fc46ab2109c9dcb07472eb0f3bcfa437",
-      "themeBytes": 810,
+      "themeBytes": 809,
       "imageBytes": 997112,
-      "sourceURL": "https://github.com/983033995/Codex-Theme-Gallery/tree/main/packages/themes/fortune-coder/1.0.0"
+      "sourceURL": "https://github.com/983033995/Codex-Theme-Gallery/tree/17170065c8972f4b1fd63aa735acfd7687adf433/packages/themes/fortune-coder/1.0.0"
     }
   ],
   "pets": []
