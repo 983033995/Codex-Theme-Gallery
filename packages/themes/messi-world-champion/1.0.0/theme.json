@@ -1,0 +1,41 @@
+{
+  "schemaVersion": 1,
+  "id": "messi-world-champion",
+  "name": "阿根廷冠军之夜",
+  "version": "1.0.0",
+  "description": "以 2022 卡塔尔世界杯阿根廷夺冠为灵感的浅色庆典主题：蓝白球衣、金色奖杯、球场灯光与彩带共同营造冠军之夜。",
+  "author": "Codex Theme Studio Community",
+  "sharedBy": "983033995",
+  "createdAt": "2026-07-22T04:45:15.911Z",
+  "license": "CC-BY-4.0",
+  "minEngineVersion": "1.3.0",
+  "image": "background.png",
+  "preview": "preview.png",
+  "appearance": "light",
+  "tagline": "Vamos Argentina · 把每一次交付踢进球门",
+  "brandSubtitle": "真实阿根廷 2022 冠军阵容纪念版",
+  "projectPrefix": "冠军项目 · ",
+  "projectLabel": "选择本场项目",
+  "statusText": "世界冠军阵容已集结",
+  "quote": "团结 · 信念 · 荣耀",
+  "colors": {
+    "background": "#F7FBFF",
+    "panel": "#F9FCFF",
+    "panelAlt": "#E8F4FF",
+    "accent": "#1672C9",
+    "accentAlt": "#4EA7E8",
+    "secondary": "#C99A2E",
+    "highlight": "#F2CE65",
+    "text": "#102F57",
+    "muted": "#517197",
+    "line": "rgba(22, 114, 201, .22)"
+  },
+  "art": {
+    "focusX": 0.72,
+    "focusY": 0.46,
+    "safeArea": "left",
+    "taskMode": "ambient"
+  },
+  "tokens": "tokens.json",
+  "decorations": "decorations.json"
+}

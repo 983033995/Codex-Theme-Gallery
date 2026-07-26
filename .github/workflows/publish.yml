@@ -8,6 +8,8 @@ on:
       - "stats/**"
       - "scripts/build-registry.mjs"
       - "scripts/ensure-catalog-issues.mjs"
+      - "scripts/sync-github-stats.mjs"
+      - ".github/workflows/publish.yml"
   workflow_dispatch:
 
 permissions:
@@ -33,8 +35,12 @@ jobs:
         with:
           node-version: 22
       - run: npm test
-      - name: Ensure catalog label
-        run: gh label create catalog-item --color D6A62E --description "Theme or pet favorite counter" --force
+      - name: Ensure catalog labels
+        run: |
+          gh label create catalog-item --color D6A62E --description "Theme or pet favorite counter" --force
+          gh label create catalog-submission --color 1D76DB --description "New catalog item awaiting review" --force
+          gh label create bug --color D73A4A --description "Confirmed defect" --force
+          gh label create triage --color FBCA04 --description "Needs maintainer triage" --force
       - name: Ensure favorite issues
         run: node scripts/ensure-catalog-issues.mjs
       - name: Publish immutable package releases
@@ -58,6 +64,8 @@ jobs:
             mapfile -d '' assets < <(find "$directory" -type f ! -name README.md ! -name LICENSE -print0)
             gh release create "$tag" "${assets[@]}" --title "$title $version" --notes "Immutable Gallery package for ${id}@${version}."
           done < <(find packages -type f \( -name theme.json -o -name pet.json \) | sort)
+      - name: Refresh counters from GitHub
+        run: node scripts/sync-github-stats.mjs
       - name: Build registry
         run: |
           node scripts/build-registry.mjs --repo "$GITHUB_REPOSITORY" --ref "$GITHUB_SHA"

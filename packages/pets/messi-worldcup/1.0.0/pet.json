@@ -1,0 +1,20 @@
+{
+  "schemaVersion": 1,
+  "id": "messi-worldcup",
+  "displayName": "梅西·世界杯冠军",
+  "version": "1.0.0",
+  "description": "梅西主题像素宠物：身披阿根廷蓝白战袍、高举世界杯冠军奖杯，陪伴任务推进与复核。",
+  "author": "Codex Theme Studio Community",
+  "sharedBy": "983033995",
+  "createdAt": "2026-07-21T07:30:45Z",
+  "license": "CC-BY-4.0",
+  "spriteVersionNumber": 2,
+  "spritesheetPath": "spritesheet.webp",
+  "recommendedThemeId": "messi-world-champion",
+  "atlas": {
+    "columns": 8,
+    "rows": 11,
+    "cellWidth": 192,
+    "cellHeight": 208
+  }
+}

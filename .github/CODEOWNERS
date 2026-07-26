@@ -1,0 +1,6 @@
+# Catalog packages, registry generation, and release automation require maintainer review.
+/packages/ @983033995
+/registry/ @983033995
+/stats/ @983033995
+/.github/ @983033995
+/scripts/ @983033995
