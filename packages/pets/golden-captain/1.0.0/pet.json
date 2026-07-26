@@ -1,0 +1,20 @@
+{
+  "schemaVersion": 1,
+  "id": "golden-captain",
+  "displayName": "梅西·金球队长",
+  "version": "1.0.0",
+  "description": "梅西主题 3D 宠物：身穿阿根廷蓝白 10 号球衣、手持金色冠军奖杯的金球队长，陪伴任务推进与等待。",
+  "author": "Codex Theme Studio Community",
+  "sharedBy": "983033995",
+  "createdAt": "2026-07-22T02:16:08Z",
+  "license": "CC-BY-4.0",
+  "spriteVersionNumber": 2,
+  "spritesheetPath": "spritesheet.webp",
+  "recommendedThemeId": "messi-world-champion",
+  "atlas": {
+    "columns": 8,
+    "rows": 11,
+    "cellWidth": 192,
+    "cellHeight": 208
+  }
+}

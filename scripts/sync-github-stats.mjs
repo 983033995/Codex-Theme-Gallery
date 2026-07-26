@@ -21,6 +21,19 @@ async function github(endpoint) {
   return response.json();
 }
 
+async function favoriteUsers(issueNumber) {
+  const users = new Set();
+  for (let page = 1; ; page += 1) {
+    const reactions = await github(`/issues/${issueNumber}/reactions?per_page=100&page=${page}`);
+    for (const reaction of reactions) {
+      if ((reaction.content === "heart" || reaction.content === "+1") && reaction.user?.login) {
+        users.add(reaction.user.login);
+      }
+    }
+    if (reactions.length < 100) return users;
+  }
+}
+
 for (const name of fs.readdirSync(path.join(root, "stats")).filter((value) => value.endsWith(".json"))) {
   const file = path.join(root, "stats", name);
   const stats = JSON.parse(fs.readFileSync(file, "utf8"));
@@ -36,9 +49,7 @@ for (const name of fs.readdirSync(path.join(root, "stats")).filter((value) => va
   stats.downloads = release.assets.find((asset) => asset.name === primaryName)?.download_count ?? 0;
 
   if (Number.isInteger(stats.statsIssueNumber)) {
-    const reactions = await github(`/issues/${stats.statsIssueNumber}/reactions?per_page=100`);
-    const users = new Set(reactions.filter((reaction) => reaction.content === "heart" || reaction.content === "+1").map((reaction) => reaction.user?.login).filter(Boolean));
-    stats.favorites = users.size;
+    stats.favorites = (await favoriteUsers(stats.statsIssueNumber)).size;
   }
   stats.updatedAt = new Date().toISOString();
   fs.writeFileSync(file, `${JSON.stringify(stats, null, 2)}\n`);

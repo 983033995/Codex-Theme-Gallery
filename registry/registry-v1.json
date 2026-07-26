@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-07-25T19:35:56.860Z",
+  "generatedAt": "2026-07-26T03:46:32.966Z",
   "themes": [
     {
       "id": "fortune-coder",
@@ -27,8 +27,114 @@
       "imageSHA256": "09113a93445e774923308ae0a1706e71fc46ab2109c9dcb07472eb0f3bcfa437",
       "themeBytes": 839,
       "imageBytes": 997112,
-      "sourceURL": "https://github.com/983033995/Codex-Theme-Gallery/tree/05f45772aff80aff5ef2b8f0bc974169e56ce073/packages/themes/fortune-coder/1.1.0"
+      "sourceURL": "https://github.com/983033995/Codex-Theme-Gallery/tree/main/packages/themes/fortune-coder/1.1.0"
+    },
+    {
+      "id": "messi-world-champion",
+      "name": "阿根廷冠军之夜",
+      "version": "1.0.0",
+      "summary": "以 2022 卡塔尔世界杯阿根廷夺冠为灵感的浅色庆典主题：蓝白球衣、金色奖杯、球场灯光与彩带共同营造冠军之夜。",
+      "author": "Codex Theme Studio Community",
+      "sharedBy": "983033995",
+      "license": "CC-BY-4.0",
+      "createdAt": "2026-07-22T04:45:15.911Z",
+      "publishedAt": "2026-07-22T04:45:15.911Z",
+      "updatedAt": "2026-07-22T04:45:15.911Z",
+      "releaseTag": "theme-messi-world-champion-v1.0.0",
+      "previewURL": "https://github.com/983033995/Codex-Theme-Gallery/releases/download/theme-messi-world-champion-v1.0.0/preview.png",
+      "statsIssueURL": null,
+      "stats": {
+        "downloads": 0,
+        "favorites": 0
+      },
+      "minEngineVersion": "1.3.0",
+      "themeConfigURL": "https://github.com/983033995/Codex-Theme-Gallery/releases/download/theme-messi-world-champion-v1.0.0/theme.json",
+      "imageURL": "https://github.com/983033995/Codex-Theme-Gallery/releases/download/theme-messi-world-champion-v1.0.0/background.png",
+      "themeSHA256": "d6575fbd46d0793381d095bc51552b2f92e281467ac621a2d63d19d71cecb64c",
+      "imageSHA256": "1b139fd8844ce7474b04c33a32d21b7352d4d63b3c383805d4a6b7ee405dc012",
+      "themeBytes": 1302,
+      "imageBytes": 2283544,
+      "sourceURL": "https://github.com/983033995/Codex-Theme-Gallery/tree/main/packages/themes/messi-world-champion/1.0.0"
     }
   ],
-  "pets": []
+  "pets": [
+    {
+      "id": "caibaozi",
+      "name": "财宝仔",
+      "version": "1.0.0",
+      "summary": "财神主题的迷你程序员伙伴，陪你招财、写码、等待审批并复核任务。",
+      "author": "Codex Theme Studio Community",
+      "sharedBy": "983033995",
+      "license": "CC-BY-4.0",
+      "createdAt": "2026-07-20T00:00:00Z",
+      "publishedAt": "2026-07-20T00:00:00Z",
+      "updatedAt": "2026-07-20T00:00:00Z",
+      "releaseTag": "pet-caibaozi-v1.0.0",
+      "previewURL": "https://github.com/983033995/Codex-Theme-Gallery/releases/download/pet-caibaozi-v1.0.0/preview.png",
+      "statsIssueURL": null,
+      "stats": {
+        "downloads": 0,
+        "favorites": 0
+      },
+      "petConfigURL": "https://github.com/983033995/Codex-Theme-Gallery/releases/download/pet-caibaozi-v1.0.0/pet.json",
+      "spritesheetURL": "https://github.com/983033995/Codex-Theme-Gallery/releases/download/pet-caibaozi-v1.0.0/spritesheet.webp",
+      "petSHA256": "42c1c05d5cb4878dedbf1a6aa92676c801d93e4de4fcbc0784c2f1af08ae30ad",
+      "spritesheetSHA256": "9ad82598fb77fcd1cccdfd9da4256c071807372a811976d1d3f3d02bc138a81c",
+      "petBytes": 581,
+      "spritesheetBytes": 2547652,
+      "sourceURL": "https://github.com/983033995/Codex-Theme-Gallery/tree/main/packages/pets/caibaozi/1.0.0"
+    },
+    {
+      "id": "golden-captain",
+      "name": "梅西·金球队长",
+      "version": "1.0.0",
+      "summary": "梅西主题 3D 宠物：身穿阿根廷蓝白 10 号球衣、手持金色冠军奖杯的金球队长，陪伴任务推进与等待。",
+      "author": "Codex Theme Studio Community",
+      "sharedBy": "983033995",
+      "license": "CC-BY-4.0",
+      "createdAt": "2026-07-22T02:16:08Z",
+      "publishedAt": "2026-07-22T02:16:08Z",
+      "updatedAt": "2026-07-22T02:16:08Z",
+      "releaseTag": "pet-golden-captain-v1.0.0",
+      "previewURL": null,
+      "statsIssueURL": null,
+      "stats": {
+        "downloads": 0,
+        "favorites": 0
+      },
+      "petConfigURL": "https://github.com/983033995/Codex-Theme-Gallery/releases/download/pet-golden-captain-v1.0.0/pet.json",
+      "spritesheetURL": "https://github.com/983033995/Codex-Theme-Gallery/releases/download/pet-golden-captain-v1.0.0/spritesheet.webp",
+      "petSHA256": "1e3c3799738a0323dc55a43e71613feff215e2f3886d8c0dc19bca7999a39696",
+      "spritesheetSHA256": "1cbea4974b34090a2935bb62b9ec3fd46f93183236aca57eb7771b0d970e4214",
+      "petBytes": 618,
+      "spritesheetBytes": 1890438,
+      "sourceURL": "https://github.com/983033995/Codex-Theme-Gallery/tree/main/packages/pets/golden-captain/1.0.0"
+    },
+    {
+      "id": "messi-worldcup",
+      "name": "梅西·世界杯冠军",
+      "version": "1.0.0",
+      "summary": "梅西主题像素宠物：身披阿根廷蓝白战袍、高举世界杯冠军奖杯，陪伴任务推进与复核。",
+      "author": "Codex Theme Studio Community",
+      "sharedBy": "983033995",
+      "license": "CC-BY-4.0",
+      "createdAt": "2026-07-21T07:30:45Z",
+      "publishedAt": "2026-07-21T07:30:45Z",
+      "updatedAt": "2026-07-21T07:30:45Z",
+      "releaseTag": "pet-messi-worldcup-v1.0.0",
+      "previewURL": null,
+      "statsIssueURL": null,
+      "stats": {
+        "downloads": 0,
+        "favorites": 0
+      },
+      "petConfigURL": "https://github.com/983033995/Codex-Theme-Gallery/releases/download/pet-messi-worldcup-v1.0.0/pet.json",
+      "spritesheetURL": "https://github.com/983033995/Codex-Theme-Gallery/releases/download/pet-messi-worldcup-v1.0.0/spritesheet.webp",
+      "petSHA256": "19710bb05506c3cf03d69b58049b667b2330582d860b9ab688a5b410a2d258f4",
+      "spritesheetSHA256": "e911443c46efc80b5c3e885abb4fcb6351261df6137420d2e8d1116d9d3d661e",
+      "petBytes": 604,
+      "spritesheetBytes": 1384094,
+      "sourceURL": "https://github.com/983033995/Codex-Theme-Gallery/tree/main/packages/pets/messi-worldcup/1.0.0"
+    }
+  ]
 }

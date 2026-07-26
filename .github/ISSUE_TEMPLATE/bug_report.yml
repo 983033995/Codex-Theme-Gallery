@@ -1,0 +1,31 @@
+name: 问题报告
+description: 报告安装、索引、发布或统计异常
+title: "fix: "
+labels: ["bug", "triage"]
+body:
+  - type: markdown
+    attributes:
+      value: "请勿粘贴访问令牌、用户数据或私有资源链接。"
+  - type: dropdown
+    id: area
+    attributes:
+      label: 影响范围
+      options: ["Registry", "主题包", "宠物包", "发布流水线", "下载/收藏统计"]
+    validations:
+      required: true
+  - type: input
+    id: item
+    attributes:
+      label: 关联内容 ID 或 Release Tag
+  - type: textarea
+    id: reproduction
+    attributes:
+      label: 复现步骤与实际结果
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: 预期结果
+    validations:
+      required: true

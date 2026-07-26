@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "caibaozi",
+  "displayName": "财宝仔",
+  "version": "1.0.0",
+  "description": "财神主题的迷你程序员伙伴，陪你招财、写码、等待审批并复核任务。",
+  "author": "Codex Theme Studio Community",
+  "sharedBy": "983033995",
+  "createdAt": "2026-07-20T00:00:00Z",
+  "license": "CC-BY-4.0",
+  "spriteVersionNumber": 2,
+  "spritesheetPath": "spritesheet.webp",
+  "preview": "preview.png",
+  "recommendedThemeId": "fortune-coder",
+  "atlas": {
+    "columns": 8,
+    "rows": 11,
+    "cellWidth": 192,
+    "cellHeight": 208
+  }
+}
