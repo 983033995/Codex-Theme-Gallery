@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-07-29T03:42:57.716Z",
+  "generatedAt": "2026-07-29T09:10:56.375Z",
   "themes": [
     {
       "id": "fortune-coder",
@@ -12,7 +12,7 @@
       "license": "CC-BY-4.0",
       "createdAt": "2026-07-20T00:00:00Z",
       "publishedAt": "2026-07-20T00:00:00Z",
-      "updatedAt": "2026-07-29T03:42:55.972Z",
+      "updatedAt": "2026-07-29T09:10:55.171Z",
       "releaseTag": "theme-fortune-coder-v1.1.0",
       "previewURL": "https://github.com/983033995/Codex-Theme-Gallery/releases/download/theme-fortune-coder-v1.1.0/preview.png",
       "statsIssueURL": "https://github.com/983033995/Codex-Theme-Gallery/issues/1",
@@ -27,7 +27,7 @@
       "imageSHA256": "09113a93445e774923308ae0a1706e71fc46ab2109c9dcb07472eb0f3bcfa437",
       "themeBytes": 839,
       "imageBytes": 997112,
-      "sourceURL": "https://github.com/983033995/Codex-Theme-Gallery/tree/3a2360e7c0653d8187bef22e070a85839d18b91e/packages/themes/fortune-coder/1.1.0"
+      "sourceURL": "https://github.com/983033995/Codex-Theme-Gallery/tree/80e4b64a7744d000298c680bea9a13a5fcf91c37/packages/themes/fortune-coder/1.1.0"
     },
     {
       "id": "messi-world-champion",
@@ -39,7 +39,7 @@
       "license": "CC-BY-4.0",
       "createdAt": "2026-07-22T04:45:15.911Z",
       "publishedAt": "2026-07-22T04:45:15.911Z",
-      "updatedAt": "2026-07-29T03:42:57.066Z",
+      "updatedAt": "2026-07-29T09:10:55.951Z",
       "releaseTag": "theme-messi-world-champion-v1.0.0",
       "previewURL": "https://github.com/983033995/Codex-Theme-Gallery/releases/download/theme-messi-world-champion-v1.0.0/preview.png",
       "statsIssueURL": "https://github.com/983033995/Codex-Theme-Gallery/issues/11",
@@ -54,7 +54,7 @@
       "imageSHA256": "1b139fd8844ce7474b04c33a32d21b7352d4d63b3c383805d4a6b7ee405dc012",
       "themeBytes": 1302,
       "imageBytes": 2283544,
-      "sourceURL": "https://github.com/983033995/Codex-Theme-Gallery/tree/3a2360e7c0653d8187bef22e070a85839d18b91e/packages/themes/messi-world-champion/1.0.0"
+      "sourceURL": "https://github.com/983033995/Codex-Theme-Gallery/tree/80e4b64a7744d000298c680bea9a13a5fcf91c37/packages/themes/messi-world-champion/1.0.0"
     }
   ],
   "pets": [
@@ -68,7 +68,7 @@
       "license": "CC-BY-4.0",
       "createdAt": "2026-07-20T00:00:00Z",
       "publishedAt": "2026-07-20T00:00:00Z",
-      "updatedAt": "2026-07-29T03:42:55.422Z",
+      "updatedAt": "2026-07-29T09:10:54.738Z",
       "releaseTag": "pet-caibaozi-v1.0.0",
       "previewURL": "https://github.com/983033995/Codex-Theme-Gallery/releases/download/pet-caibaozi-v1.0.0/preview.png",
       "statsIssueURL": "https://github.com/983033995/Codex-Theme-Gallery/issues/9",
@@ -82,7 +82,7 @@
       "spritesheetSHA256": "9ad82598fb77fcd1cccdfd9da4256c071807372a811976d1d3f3d02bc138a81c",
       "petBytes": 581,
       "spritesheetBytes": 2547652,
-      "sourceURL": "https://github.com/983033995/Codex-Theme-Gallery/tree/3a2360e7c0653d8187bef22e070a85839d18b91e/packages/pets/caibaozi/1.0.0"
+      "sourceURL": "https://github.com/983033995/Codex-Theme-Gallery/tree/80e4b64a7744d000298c680bea9a13a5fcf91c37/packages/pets/caibaozi/1.0.0"
     },
     {
       "id": "golden-captain",
@@ -94,7 +94,7 @@
       "license": "CC-BY-4.0",
       "createdAt": "2026-07-22T02:16:08Z",
       "publishedAt": "2026-07-22T02:16:08Z",
-      "updatedAt": "2026-07-29T03:42:56.466Z",
+      "updatedAt": "2026-07-29T09:10:55.567Z",
       "releaseTag": "pet-golden-captain-v1.0.0",
       "previewURL": null,
       "statsIssueURL": "https://github.com/983033995/Codex-Theme-Gallery/issues/10",
@@ -108,7 +108,7 @@
       "spritesheetSHA256": "1cbea4974b34090a2935bb62b9ec3fd46f93183236aca57eb7771b0d970e4214",
       "petBytes": 618,
       "spritesheetBytes": 1890438,
-      "sourceURL": "https://github.com/983033995/Codex-Theme-Gallery/tree/3a2360e7c0653d8187bef22e070a85839d18b91e/packages/pets/golden-captain/1.0.0"
+      "sourceURL": "https://github.com/983033995/Codex-Theme-Gallery/tree/80e4b64a7744d000298c680bea9a13a5fcf91c37/packages/pets/golden-captain/1.0.0"
     },
     {
       "id": "messi-worldcup",
@@ -120,7 +120,7 @@
       "license": "CC-BY-4.0",
       "createdAt": "2026-07-21T07:30:45Z",
       "publishedAt": "2026-07-21T07:30:45Z",
-      "updatedAt": "2026-07-29T03:42:57.628Z",
+      "updatedAt": "2026-07-29T09:10:56.289Z",
       "releaseTag": "pet-messi-worldcup-v1.0.0",
       "previewURL": null,
       "statsIssueURL": "https://github.com/983033995/Codex-Theme-Gallery/issues/12",
@@ -134,7 +134,7 @@
       "spritesheetSHA256": "e911443c46efc80b5c3e885abb4fcb6351261df6137420d2e8d1116d9d3d661e",
       "petBytes": 604,
       "spritesheetBytes": 1384094,
-      "sourceURL": "https://github.com/983033995/Codex-Theme-Gallery/tree/3a2360e7c0653d8187bef22e070a85839d18b91e/packages/pets/messi-worldcup/1.0.0"
+      "sourceURL": "https://github.com/983033995/Codex-Theme-Gallery/tree/80e4b64a7744d000298c680bea9a13a5fcf91c37/packages/pets/messi-worldcup/1.0.0"
     }
   ]
 }
